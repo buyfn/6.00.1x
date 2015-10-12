@@ -1,0 +1,11 @@
+set bestshift to 0
+set max number of valid words to 0
+apply each shift from 0 to 25 to ciphertext
+  apply shift to ciphertext
+  split ciphertext into list of words
+  count number of valid words in the list
+  if number of valid words for shift is bigger than max number of words:
+    set new max number of words
+    set new best shift
+return shift that provided with max number of valid words
+apply found shift to ciphertext
