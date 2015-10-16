@@ -9,12 +9,8 @@ def genPrimes():
         isPrime = False
         break
     if isPrime:
-      try:
-        print len(primes), '\t', n, '\t', (n - primes[-1])
-      except:
-        pass
       yield n
       primes.append(n)
 
 for prime in genPrimes():
-  pass
+  print prime
